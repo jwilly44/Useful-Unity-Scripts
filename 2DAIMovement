@@ -1,0 +1,25 @@
+ using UnityEngine;
+ using System.Collections;
+ 
+ public class EnemyAI : MonoBehaviour {
+ 
+     public Transform Target;
+     private GameObject Enemy;
+     private GameObject Player;
+     private float Range;
+     public float Speed;
+ 
+ 
+     void Start () {
+         Enemy = GameObject.FindGameObjectWithTag ("Enemy");
+         Player = GameObject.FindGameObjectWithTag ("Player");
+     }
+     
+     void Update () {
+         Range = Vector2.Distance (Enemy.transform.position, Player.transform.position);
+         if (Range <= 15.0f);
+             transform.Translate(Vector2.MoveTowards (Enemy.transform.position, Player.transform.position, Range) * Speed * Time.deltaTime);
+                 }
+     }
+ }
+DO NOT FORGET TO ADD THE TAGS ON THE PLAYER AND ENEMY
