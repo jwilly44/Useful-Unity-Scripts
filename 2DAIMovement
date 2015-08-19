@@ -19,7 +19,10 @@
          Range = Vector2.Distance (Enemy.transform.position, Player.transform.position);
          if (Range <= 15.0f);
              transform.Translate(Vector2.MoveTowards (Enemy.transform.position, Player.transform.position, Range) * Speed * Time.deltaTime);
-                 }
+         }
      }
  }
+
+
+
 DO NOT FORGET TO ADD THE TAGS ON THE PLAYER AND ENEMY
